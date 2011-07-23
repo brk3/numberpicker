@@ -204,6 +204,9 @@ public class NumberPicker extends LinearLayout implements OnClickListener,
 
     public void onClick(View v) {
         validateInput(mText);
+        if (v == null) {
+            return;
+        }
         if (!mText.hasFocus()) mText.requestFocus();
 
         // now perform the increment/decrement
